@@ -22,11 +22,20 @@ class ViewController: UIViewController {
     
     @IBOutlet var cardButtons: [UIButton]!
     
+    @IBAction func newGameButton(_ sender: UIButton) {
+        emojiChoices = emojiChoicesAll
+        flipCount = 0
+        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+        updateViewFromModel()
+    }
+    
     @IBAction func touchCard(_ sender: UIButton) {
-        flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
-            game.chooseCard(at: cardNumber)
-            updateViewFromModel()
+            if !game.isMatched(at: cardNumber) {
+                flipCount += 1
+                game.chooseCard(at: cardNumber)
+                updateViewFromModel()
+            }
         } else {
             print("chosen card was not in cardButtons")
         }
@@ -47,6 +56,7 @@ class ViewController: UIViewController {
         }
     }
     
+    let emojiChoicesAll = ["🎃", "👻", "🙀", "🍬", "🍎", "🍭"]
     var emojiChoices = ["🎃", "👻", "🙀", "🍬", "🍎", "🍭"]
     
     var emoji = [Int: String]()
