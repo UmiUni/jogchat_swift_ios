@@ -12,6 +12,8 @@
 		F2A92EC520CDE49800F28FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A92EC320CDE49800F28FBD /* Main.storyboard */; };
 		F2A92EC720CDE49A00F28FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A92EC620CDE49A00F28FBD /* Assets.xcassets */; };
 		F2A92ECA20CDE49A00F28FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A92EC820CDE49A00F28FBD /* LaunchScreen.storyboard */; };
+		F2A92ED320CDF4C100F28FBD /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A92ED220CDF4C100F28FBD /* Concentration.swift */; };
+		F2A92ED520CDF52400F28FBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A92ED420CDF52400F28FBD /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F2A92EC620CDE49A00F28FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2A92EC920CDE49A00F28FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A92ECB20CDE49A00F28FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A92ED220CDF4C100F28FBD /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		F2A92ED420CDF52400F28FBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				F2A92EC120CDE49800F28FBD /* ViewController.swift */,
 				F2A92EC320CDE49800F28FBD /* Main.storyboard */,
+				F2A92ED220CDF4C100F28FBD /* Concentration.swift */,
+				F2A92ED420CDF52400F28FBD /* Card.swift */,
 				F2A92ED120CDE4DF00F28FBD /* Supporting Files */,
 				F2A92ECB20CDE49A00F28FBD /* Info.plist */,
 			);
@@ -145,6 +151,8 @@
 			files = (
 				F2A92EC220CDE49800F28FBD /* ViewController.swift in Sources */,
 				F2A92EC020CDE49800F28FBD /* AppDelegate.swift in Sources */,
+				F2A92ED320CDF4C100F28FBD /* Concentration.swift in Sources */,
+				F2A92ED520CDF52400F28FBD /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
