@@ -33,10 +33,18 @@ class Concentration {
     }
     
     init(numberOfPairsOfCards: Int) {
+        var temp = [Card]()
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
-            cards += [card, card]
+            temp += [card, card]
+        }
+        
+        for _ in 0..<temp.count {
+            let rand = Int(arc4random_uniform(UInt32(temp.count)))
+            
+            cards.append(temp[rand])
+            
+            temp.remove(at: rand)
         }
     }
-    // TODO: Shuffle the cards
 }
