@@ -66,13 +66,13 @@ class ViewController: UIViewController {
     private let emojiChoicesAll = ["🎃", "👻", "🙀", "🍬", "🍎", "🍭"]
     private var emojiChoices = ["🎃", "👻", "🙀", "🍬", "🍎", "🍭"]
     
-    private var emoji = [Int: String]()
+    private var emoji = [Card: String]()
     
     private func emoji(for card: Card) -> String {
-        if emoji[card.id] == nil, emojiChoices.count > 0 {
-            emoji[card.id] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+        if emoji[card] == nil, emojiChoices.count > 0 {
+            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
         }
-        return emoji[card.id] ?? "?"
+        return emoji[card] ?? "?"
     }
     
     private func flipCard(withEmoji emoji: String, on button: UIButton) {
