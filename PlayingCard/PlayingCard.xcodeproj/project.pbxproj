@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F28815B720E05C1600E92562 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28815B620E05C1600E92562 /* PlayingCardDeck.swift */; };
+		F28815B920E0720300E92562 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28815B820E0720300E92562 /* PlayingCardView.swift */; };
 		F2F1918820E0535C00CE9819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F1918720E0535C00CE9819 /* AppDelegate.swift */; };
 		F2F1918A20E0535C00CE9819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F1918920E0535C00CE9819 /* ViewController.swift */; };
 		F2F1918D20E0535C00CE9819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F1918B20E0535C00CE9819 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		F28815B620E05C1600E92562 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		F28815B820E0720300E92562 /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 		F2F1918420E0535C00CE9819 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F1918720E0535C00CE9819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2F1918920E0535C00CE9819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F1918920E0535C00CE9819 /* ViewController.swift */,
+				F28815B820E0720300E92562 /* PlayingCardView.swift */,
 				F2F1918B20E0535C00CE9819 /* Main.storyboard */,
 				F2F1919C20E0544B00CE9819 /* PlayingCard.swift */,
 				F28815B620E05C1600E92562 /* PlayingCardDeck.swift */,
@@ -152,6 +155,7 @@
 				F2F1918A20E0535C00CE9819 /* ViewController.swift in Sources */,
 				F28815B720E05C1600E92562 /* PlayingCardDeck.swift in Sources */,
 				F2F1919D20E0544B00CE9819 /* PlayingCard.swift in Sources */,
+				F28815B920E0720300E92562 /* PlayingCardView.swift in Sources */,
 				F2F1918820E0535C00CE9819 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
