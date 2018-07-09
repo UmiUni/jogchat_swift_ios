@@ -13,6 +13,8 @@
 		F2ACEAE620ED871900E8EC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2ACEAE420ED871900E8EC8E /* LaunchScreen.storyboard */; };
 		F2ACEAEE20ED92D500E8EC8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2ACEAED20ED92D500E8EC8E /* Main.storyboard */; };
 		F2ACEAF120F1812500E8EC8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEAF020F1812500E8EC8E /* LoginViewController.swift */; };
+		F2ACEAF320F2ECD100E8EC8E /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */; };
+		F2ACEAF520F2EE5000E8EC8E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2ACEAF420F2EE5000E8EC8E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F2ACEAE720ED871900E8EC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2ACEAED20ED92D500E8EC8E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F2ACEAF020F1812500E8EC8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		F2ACEAF420F2EE5000E8EC8E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		F2ACEACF20ED871800E8EC8E = {
 			isa = PBXGroup;
 			children = (
+				F2ACEAF420F2EE5000E8EC8E /* Default-568h@2x.png */,
 				F2ACEADA20ED871800E8EC8E /* ReferHelper */,
 				F2ACEAD920ED871800E8EC8E /* Products */,
 			);
@@ -59,20 +64,13 @@
 				F2ACEAED20ED92D500E8EC8E /* Main.storyboard */,
 				F2ACEAF020F1812500E8EC8E /* LoginViewController.swift */,
 				F2ACEADD20ED871800E8EC8E /* ViewController.swift */,
+				F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */,
 				F2ACEAE220ED871900E8EC8E /* Assets.xcassets */,
 				F2ACEAE420ED871900E8EC8E /* LaunchScreen.storyboard */,
 				F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */,
 				F2ACEAE720ED871900E8EC8E /* Info.plist */,
-				F2ACEAEF20F161EC00E8EC8E /* Supporting files */,
 			);
 			path = ReferHelper;
-			sourceTree = "<group>";
-		};
-		F2ACEAEF20F161EC00E8EC8E /* Supporting files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2ACEAEE20ED92D500E8EC8E /* Main.storyboard in Resources */,
+				F2ACEAF520F2EE5000E8EC8E /* Default-568h@2x.png in Resources */,
 				F2ACEAE620ED871900E8EC8E /* LaunchScreen.storyboard in Resources */,
 				F2ACEAE320ED871900E8EC8E /* Assets.xcassets in Resources */,
 			);
@@ -147,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2ACEAF120F1812500E8EC8E /* LoginViewController.swift in Sources */,
+				F2ACEAF320F2ECD100E8EC8E /* MainTabViewController.swift in Sources */,
 				F2ACEADE20ED871800E8EC8E /* ViewController.swift in Sources */,
 				F2ACEADC20ED871800E8EC8E /* AppDelegate.swift in Sources */,
 			);
