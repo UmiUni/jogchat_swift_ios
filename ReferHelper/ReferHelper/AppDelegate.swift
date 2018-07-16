@@ -26,19 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let params = queryParameters(from: url)
             
-            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("Circles") as UIViewController
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
-            self.window?.makeKeyAndVisible()
+            GoToSignup(params)
         }
         return true
     }
     
-    func GoToSignup(_ params) {
-        let mainTabViewController = storyboard?.instantiateViewController(withIdentifier: "Signup") as! MainTabViewController
-        mainTabViewController.selectedViewController = mainTabViewController.viewControllers?[0]
-        present(mainTabViewController, animated: true, completion: nil)
+    func GoToSignup(_ params: [String:String]) {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = createAccountStoryboard.instantiateViewController(withIdentifier: "CreateAccount") as! CreateAccount
+//        initialViewController.Email.text = params["email"]
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
     
     func queryParameters(from url: URL) -> [String: String] {

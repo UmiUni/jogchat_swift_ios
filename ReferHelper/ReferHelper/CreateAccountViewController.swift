@@ -1,5 +1,5 @@
 //
-//  SignupViewController.swift
+//  CreateAccountViewController.swift
 //  ReferHelper
 //
 //  Created by XMZ on 07/15/2018.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+class CreateAccountViewController: UIViewController {
 
-    @IBOutlet weak var email: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +21,7 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func NextButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "signupNext", sender: self)
-    }
-    
+
     /*
     // MARK: - Navigation
 
