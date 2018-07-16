@@ -18,6 +18,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            let url = userActivity.webpageURL!
+            //handle url and open whatever page you want to open.
+            
+            let params = queryParameters(from: url)
+            
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewControllerWithIdentifier("Circles") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewControlleripad
+            self.window?.makeKeyAndVisible()
+        }
+        return true
+    }
+    
+    func GoToSignup(_ params) {
+        let mainTabViewController = storyboard?.instantiateViewController(withIdentifier: "Signup") as! MainTabViewController
+        mainTabViewController.selectedViewController = mainTabViewController.viewControllers?[0]
+        present(mainTabViewController, animated: true, completion: nil)
+    }
+    
+    func queryParameters(from url: URL) -> [String: String] {
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        var queryParams = [String: String]()
+        for queryItem: URLQueryItem in (urlComponents?.queryItems)! {
+            if queryItem.value == nil {
+                continue
+            }
+            queryParams[queryItem.name] = queryItem.value
+        }
+        return queryParams
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

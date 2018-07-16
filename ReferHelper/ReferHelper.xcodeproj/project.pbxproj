@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F298DB5D20FC1B3F0087F9DB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */; };
 		F2ACEADC20ED871800E8EC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */; };
 		F2ACEADE20ED871800E8EC8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEADD20ED871800E8EC8E /* ViewController.swift */; };
 		F2ACEAE320ED871900E8EC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2ACEAE220ED871900E8EC8E /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReferHelper.entitlements; sourceTree = "<group>"; };
+		F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F2ACEAD820ED871800E8EC8E /* ReferHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReferHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2ACEADD20ED871800E8EC8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,10 +44,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F298DB5A20FBF6AE0087F9DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */,
+				F2ACEAE720ED871900E8EC8E /* Info.plist */,
+				F2ACEAF420F2EE5000E8EC8E /* Default-568h@2x.png */,
+				F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F2ACEACF20ED871800E8EC8E = {
 			isa = PBXGroup;
 			children = (
-				F2ACEAF420F2EE5000E8EC8E /* Default-568h@2x.png */,
 				F2ACEADA20ED871800E8EC8E /* ReferHelper */,
 				F2ACEAD920ED871800E8EC8E /* Products */,
 			);
@@ -63,12 +76,12 @@
 			children = (
 				F2ACEAED20ED92D500E8EC8E /* Main.storyboard */,
 				F2ACEAF020F1812500E8EC8E /* LoginViewController.swift */,
+				F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */,
 				F2ACEADD20ED871800E8EC8E /* ViewController.swift */,
 				F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */,
 				F2ACEAE220ED871900E8EC8E /* Assets.xcassets */,
 				F2ACEAE420ED871900E8EC8E /* LaunchScreen.storyboard */,
-				F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */,
-				F2ACEAE720ED871900E8EC8E /* Info.plist */,
+				F298DB5A20FBF6AE0087F9DB /* Supporting Files */,
 			);
 			path = ReferHelper;
 			sourceTree = "<group>";
@@ -105,6 +118,11 @@
 				TargetAttributes = {
 					F2ACEAD720ED871800E8EC8E = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -147,6 +165,7 @@
 			files = (
 				F2ACEAF120F1812500E8EC8E /* LoginViewController.swift in Sources */,
 				F2ACEAF320F2ECD100E8EC8E /* MainTabViewController.swift in Sources */,
+				F298DB5D20FC1B3F0087F9DB /* SignupViewController.swift in Sources */,
 				F2ACEADE20ED871800E8EC8E /* ViewController.swift in Sources */,
 				F2ACEADC20ED871800E8EC8E /* AppDelegate.swift in Sources */,
 			);
@@ -284,9 +303,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReferHelper/ReferHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CR32K9WG2A;
-				INFOPLIST_FILE = ReferHelper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReferHelper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +322,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReferHelper/ReferHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CR32K9WG2A;
-				INFOPLIST_FILE = ReferHelper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ReferHelper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
