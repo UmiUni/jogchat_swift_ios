@@ -10,12 +10,12 @@ import UIKit
 
 class CreateAccount: UIViewController {
 
-    @IBOutlet weak var VerifyMessage: UILabel!
-    @IBOutlet weak var Email: UILabel!
+    var email = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(email)
         // Do any additional setup after loading the view.
     }
 

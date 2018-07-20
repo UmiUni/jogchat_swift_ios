@@ -276,9 +276,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JED-cv-S6N"/>
                     </view>
-                    <connections>
-                        <outlet property="VerifyMessage" destination="sD1-OK-mUx" id="eOG-7Y-6Wz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxE-JG-xqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,30 +296,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5E-mr-ptN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4817" y="-600"/>
-        </scene>
-        <!--Create Account-->
-        <scene sceneID="bIx-Tu-PRL">
-            <objects>
-                <viewController storyboardIdentifier="SignupForm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M6v-aA-rgj" customClass="CreateAccount" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pdt-Ex-MWj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP8-wc-RZM">
-                                <rect key="frame" x="167" y="115" width="41" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="g9h-6b-ZAM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EAc-4R-DIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3702" y="-1232"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="9TA-ll-Ejz">

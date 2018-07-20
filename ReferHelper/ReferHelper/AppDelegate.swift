@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -36,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let initialViewController = createAccountStoryboard.instantiateViewController(withIdentifier: "CreateAccount") as! CreateAccount
-//        initialViewController.Email.text = params["email"]
+        initialViewController.email = params["email"]!
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
     }
