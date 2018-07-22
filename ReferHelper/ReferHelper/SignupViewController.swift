@@ -12,6 +12,8 @@ class SignupViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     
+    var message = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,18 +25,23 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func validateEmail(_ email:String) -> Bool {
+        return email != ""
+    }
+    
     @IBAction func NextButton(_ sender: UIButton) {
+        if (!validateEmail(email.text!)) {
+            return
+        }
+        
         self.performSegue(withIdentifier: "signupNext", sender: self)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "signupNext") {
+            let createAccountVC = segue.destination as! SignupFormViewController
+            createAccountVC.email = self.email.text!
+        }
     }
-    */
 
 }

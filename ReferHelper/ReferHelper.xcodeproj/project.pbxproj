@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2101BF321040D1600C58647 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2101BF221040D1600C58647 /* Constants.swift */; };
 		F298DB5D20FC1B3F0087F9DB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */; };
-		F298DB6120FC42570087F9DB /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB6020FC42570087F9DB /* CreateAccount.swift */; };
+		F298DB6120FC42570087F9DB /* SignupFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB6020FC42570087F9DB /* SignupFormViewController.swift */; };
 		F2ACEADC20ED871800E8EC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */; };
 		F2ACEADE20ED871800E8EC8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACEADD20ED871800E8EC8E /* ViewController.swift */; };
 		F2ACEAE320ED871900E8EC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2ACEAE220ED871900E8EC8E /* Assets.xcassets */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2101BF221040D1600C58647 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReferHelper.entitlements; sourceTree = "<group>"; };
 		F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		F298DB6020FC42570087F9DB /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		F298DB6020FC42570087F9DB /* SignupFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormViewController.swift; sourceTree = "<group>"; };
 		F2ACEAD820ED871800E8EC8E /* ReferHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReferHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2ACEADD20ED871800E8EC8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 			children = (
 				F2ACEAED20ED92D500E8EC8E /* Main.storyboard */,
 				F2ACEAF020F1812500E8EC8E /* LoginViewController.swift */,
-				F298DB6020FC42570087F9DB /* CreateAccount.swift */,
+				F298DB6020FC42570087F9DB /* SignupFormViewController.swift */,
 				F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */,
 				F2ACEADD20ED871800E8EC8E /* ViewController.swift */,
 				F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */,
@@ -85,6 +87,7 @@
 				F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */,
 				F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */,
 				F286945820FC84760040BF4A /* Supporting Files */,
+				F2101BF221040D1600C58647 /* Constants.swift */,
 			);
 			path = ReferHelper;
 			sourceTree = "<group>";
@@ -167,11 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2ACEAF120F1812500E8EC8E /* LoginViewController.swift in Sources */,
-				F298DB6120FC42570087F9DB /* CreateAccount.swift in Sources */,
+				F298DB6120FC42570087F9DB /* SignupFormViewController.swift in Sources */,
 				F2ACEAF320F2ECD100E8EC8E /* MainTabViewController.swift in Sources */,
 				F298DB5D20FC1B3F0087F9DB /* SignupViewController.swift in Sources */,
 				F2ACEADE20ED871800E8EC8E /* ViewController.swift in Sources */,
 				F2ACEADC20ED871800E8EC8E /* AppDelegate.swift in Sources */,
+				F2101BF321040D1600C58647 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,7 +78,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Join using work email"/>
                                 <connections>
-                                    <segue destination="PmA-Ex-4v2" kind="show" id="d36-yL-ObL"/>
+                                    <segue destination="PmA-Ex-4v2" kind="show" identifier="referrer" id="d36-yL-ObL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-Ta-dUh">
@@ -86,7 +86,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Join using edu email"/>
                                 <connections>
-                                    <segue destination="PmA-Ex-4v2" kind="show" id="eJy-l5-0Dd"/>
+                                    <segue destination="PmA-Ex-4v2" kind="show" identifier="applicant" id="eJy-l5-0Dd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,16 +254,16 @@
             </objects>
             <point key="canvasLocation" x="2764" y="465.51724137931041"/>
         </scene>
-        <!--Create Account-->
+        <!--Signup Form View Controller-->
         <scene sceneID="aOV-iC-CvC">
             <objects>
-                <viewController storyboardIdentifier="CreateAccount" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3rX-Ur-eGE" customClass="CreateAccount" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccount" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3rX-Ur-eGE" customClass="SignupFormViewController" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QHA-61-cPN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification instruction sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-OK-mUx">
-                                <rect key="frame" x="69" y="188" width="236" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sD1-OK-mUx">
+                                <rect key="frame" x="144" y="188" width="87" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -276,6 +276,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JED-cv-S6N"/>
                     </view>
+                    <connections>
+                        <outlet property="Message" destination="sD1-OK-mUx" id="Szu-ef-RiH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxE-JG-xqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
