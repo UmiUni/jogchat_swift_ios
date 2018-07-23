@@ -97,7 +97,9 @@ class SignupFormViewController: UIViewController {
     }
     
     func goToMainTabView() {
-        self.performSegue(withIdentifier: "signupFormNext", sender: self)
+        let mainTabViewController = storyboard?.instantiateViewController(withIdentifier: "MainTabViewController") as! MainTabViewController
+        mainTabViewController.selectedViewController = mainTabViewController.viewControllers?[0]
+        present(mainTabViewController, animated: true, completion: nil)
     }
 
 }

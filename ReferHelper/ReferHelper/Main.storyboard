@@ -197,7 +197,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-oZ-Krv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-oZ-Krv">
                                 <rect key="frame" x="37" y="101" width="301" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dtI-Mh-dZ3"/>
@@ -226,7 +226,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginButton:" destination="dkh-0b-iPB" eventType="touchUpInside" id="vEr-8i-CZ1"/>
+                                    <action selector="loginPressed:" destination="dkh-0b-iPB" eventType="touchUpInside" id="XFK-2N-cYd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -245,9 +245,8 @@
                         <viewLayoutGuide key="safeArea" id="1mC-Or-CtR"/>
                     </view>
                     <connections>
-                        <outlet property="_loginButton" destination="jXw-yT-Wcq" id="SWh-qO-eeo"/>
-                        <outlet property="_password" destination="SMC-iz-2mj" id="oLK-pc-hGp"/>
-                        <outlet property="_username" destination="yNI-oZ-Krv" id="aDD-Aa-pdx"/>
+                        <outlet property="email" destination="yNI-oZ-Krv" id="g2C-Q9-coe"/>
+                        <outlet property="password" destination="SMC-iz-2mj" id="dRs-d9-iFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AsU-S1-XSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,7 +412,6 @@
                         <outlet property="password" destination="fgX-N3-smP" id="ga9-kd-rYw"/>
                         <outlet property="passwordConfirm" destination="yRr-wj-GZW" id="woB-VH-eYK"/>
                         <outlet property="username" destination="nwH-dM-ndb" id="M0Z-6Y-aJo"/>
-                        <segue destination="5g7-MI-Xd6" kind="show" identifier="signupFormNext" id="Is1-ge-psK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayy-Vq-JQj" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,10 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var _username: UITextField!
-    @IBOutlet weak var _password: UITextField!
-    @IBOutlet weak var _loginButton: UIButton!
-    
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,48 +23,71 @@ class LoginViewController: UIViewController {
 //        }
     }
     
-    @IBAction func LoginButton(_ sender: UIButton) {
-        let username = _username.text
-        let password = _password.text
+    @IBAction func loginPressed(_ sender: UIButton) {
+        let emailText = email.text
+        let passwordText = password.text
         
-        if (username == "" || password == "") {
+        if (emailText == "" || passwordText == "") {
             return
         }
         
-        DoLogin(username!, password!)
+        performLogin(emailText!, passwordText!)
     }
     
-    func DoLogin(_ username: String, _ password: String) {
-        if (username.contains("admin") && password.contains("admin")) {
-            let preferences = UserDefaults.standard
-            preferences.set("admin", forKey: "session")
-            
-            DispatchQueue.main.async {
-                self.LoginDone()
+    func performLogin(_ email: String, _ password: String) {
+        // prepare json data
+        let json: [String: String] = [
+            "Email": email,
+            "Password": password,
+        ]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        // create post request
+        let url = URL(string: API.Signin)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        // insert json data to the request
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            // check for any errors
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
             }
-        } else {
-            let alert = UIAlertController(title: "Ooops", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: String] {
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                    // error res
+                    DispatchQueue.main.async {
+                        self.popupAlert(title: "Error", message: responseJSON[ResponseKey.Error]!)
+                    }
+                    return
+                }
+                // good res
+                let preferences = UserDefaults.standard
+                preferences.set(responseJSON[ResponseKey.Token], forKey: "token")
+                
+                DispatchQueue.main.async {
+                    self.goToMainTabView()
+                }
+            }
         }
+        
+        task.resume()
     }
     
-    func LoginDone() {
+    func popupAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func goToMainTabView() {
         let mainTabViewController = storyboard?.instantiateViewController(withIdentifier: "MainTabViewController") as! MainTabViewController
         mainTabViewController.selectedViewController = mainTabViewController.viewControllers?[0]
         present(mainTabViewController, animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
