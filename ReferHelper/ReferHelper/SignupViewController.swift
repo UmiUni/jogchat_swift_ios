@@ -39,7 +39,7 @@ class SignupViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "signupNext") {
-            let createAccountVC = segue.destination as! SignupFormViewController
+            let createAccountVC = segue.destination as! SignupEmailViewController
             createAccountVC.email = self.email.text!
         }
     }

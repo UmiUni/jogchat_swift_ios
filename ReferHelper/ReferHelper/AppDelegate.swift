@@ -34,9 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = createAccountStoryboard.instantiateViewController(withIdentifier: "CreateAccount") as! SignupFormViewController
-        initialViewController.email = params["email"]!
-        self.window?.rootViewController = initialViewController
+        let signupFormVC = createAccountStoryboard.instantiateViewController(withIdentifier: "SignupForm") as! SignupFormViewController
+        signupFormVC.email = params["email"]!
+        signupFormVC.token = params["token"]!
+        self.window?.rootViewController = signupFormVC
         self.window?.makeKeyAndVisible()
     }
     

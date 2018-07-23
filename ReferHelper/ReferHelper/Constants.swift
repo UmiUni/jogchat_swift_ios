@@ -23,6 +23,7 @@ struct API {
 struct ResponseKey {
     static let Message = "message"
     static let Error = "error"
+    static let Token = "AuthToken"
 }
 
 

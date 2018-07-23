@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SignupFormViewController: UIViewController {
-    var email = "";
+class SignupEmailViewController: UIViewController {
+    var email = ""
     
     @IBOutlet weak var Message: UILabel!
     
