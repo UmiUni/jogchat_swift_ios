@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ER-10-ZTj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5g7-MI-Xd6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,11 +496,33 @@
         <!--Profile-->
         <scene sceneID="uY0-U2-hbV">
             <objects>
-                <viewController id="yOC-Qw-leZ" sceneMemberID="viewController">
+                <viewController id="yOC-Qw-leZ" customClass="ProfileViewController" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M9A-e8-Ilj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JX-U8-hOQ">
+                                <rect key="frame" x="37" y="541" width="301" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YEI-xm-bmu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="dkh-0b-iPB" eventType="touchUpInside" id="cTq-do-rdi"/>
+                                    <action selector="logoutPressed:" destination="yOC-Qw-leZ" eventType="touchUpInside" id="bDm-6T-c1a"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5OS-vs-acG" firstAttribute="bottom" secondItem="2JX-U8-hOQ" secondAttribute="bottom" constant="37" id="FI8-AK-sxD"/>
+                            <constraint firstItem="5OS-vs-acG" firstAttribute="trailing" secondItem="2JX-U8-hOQ" secondAttribute="trailing" constant="37" id="RyU-gD-vMZ"/>
+                            <constraint firstItem="2JX-U8-hOQ" firstAttribute="leading" secondItem="5OS-vs-acG" secondAttribute="leading" constant="37" id="vyW-IO-jqu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5OS-vs-acG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="nav-user" id="8Xa-7l-zoI"/>
@@ -509,10 +531,10 @@
             </objects>
             <point key="canvasLocation" x="4817" y="730"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="GMF-aH-LyU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ER-10-ZTj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Welcome" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ER-10-ZTj" customClass="WelcomeViewController" customModule="ReferHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OtY-wE-jut">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

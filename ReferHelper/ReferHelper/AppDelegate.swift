@@ -14,7 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let preferences = UserDefaults.standard
+        if ((preferences.object(forKey: "token")) == nil) {
+            GoToWelcome()
+        }
+        
         return true
     }
     
@@ -28,6 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GoToSignup(params)
         }
         return true
+    }
+    
+    func GoToWelcome() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let welcomeVC = createAccountStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
+        self.window?.rootViewController = welcomeVC
+        self.window?.makeKeyAndVisible()
     }
     
     func GoToSignup(_ params: [String:String]) {

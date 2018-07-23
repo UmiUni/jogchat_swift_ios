@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
