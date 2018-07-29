@@ -26,4 +26,7 @@ struct ResponseKey {
     static let Token = "AuthToken"
 }
 
-
+struct URLType {
+    static let Signup = "signup"
+    static let ResetPassword = "reset"
+}

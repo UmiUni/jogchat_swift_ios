@@ -90,4 +90,10 @@ class LoginViewController: UIViewController {
         mainTabViewController.selectedViewController = mainTabViewController.viewControllers?[0]
         present(mainTabViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func resetPasswordPressd(_ sender: UIButton) {
+        let signupViewController = storyboard?.instantiateViewController(withIdentifier: "Signup") as! SignupViewController
+        signupViewController.resettingPassword = true
+        self.navigationController?.pushViewController(signupViewController, animated: true)
+    }
 }

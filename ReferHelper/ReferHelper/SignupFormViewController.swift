@@ -11,14 +11,24 @@ import UIKit
 class SignupFormViewController: UIViewController {
     var email = ""
     var token = ""
+    var type = ""
+    var resettingPassword = false
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordConfirm: UITextField!
     @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var usernameHint: UILabel!
     @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var passwordBottom: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resettingPassword = type == URLType.ResetPassword
+        if resettingPassword {
+            changeToResetPasswordView()
+        }
         
         getStartedButton.isEnabled = false
         
@@ -27,8 +37,17 @@ class SignupFormViewController: UIViewController {
         username.addTarget(self, action: #selector(SignupFormViewController.textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
     }
     
+    func changeToResetPasswordView () {
+        titleLabel.text = "Reset Password"
+        username.isHidden = true
+        usernameHint.isHidden = true
+        buttonTopConstraint.isActive = false
+        let newButtonTopConstraint = NSLayoutConstraint(item: getStartedButton, attribute: .top, relatedBy: .equal, toItem: passwordBottom, attribute: .bottom, multiplier: 1, constant: 20)
+        view.addConstraints([newButtonTopConstraint])
+    }
+    
     func isValid() -> Bool {
-        return password.text != "" && password.text == passwordConfirm.text && username.text != ""
+        return password.text != "" && password.text == passwordConfirm.text && (resettingPassword || !resettingPassword && username.text != "")
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -49,12 +68,12 @@ class SignupFormViewController: UIViewController {
             "Email": email,
             "Password": password.text!,
             "Token": token,
-            "Username": username.text!
+            "Username": username.text ?? ""
         ]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         // create post request
-        let url = URL(string: API.ActivateAndSignup)!
+        let url = URL(string: resettingPassword ? API.ResetPasswordForm: API.ActivateAndSignup)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         

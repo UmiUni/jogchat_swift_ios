@@ -11,13 +11,16 @@ import UIKit
 class SignupViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
     
-    var message = ""
+    var resettingPassword = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if (resettingPassword) {
+            messageLabel.text = "Send Reset\nPassword Email"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +44,7 @@ class SignupViewController: UIViewController {
         if (segue.identifier == "signupNext") {
             let createAccountVC = segue.destination as! SignupEmailViewController
             createAccountVC.email = self.email.text!
+            createAccountVC.resettingPassword = self.resettingPassword
         }
     }
 

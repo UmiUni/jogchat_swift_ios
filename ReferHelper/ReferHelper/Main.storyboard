@@ -118,16 +118,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hSn-9e-HR4">
-                                <rect key="frame" x="127" y="164" width="121.5" height="48"/>
+                                <rect key="frame" x="127.5" y="164" width="121.5" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cA-cV-c6J">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UBER 5200+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86f-dz-xFb">
-                                        <rect key="frame" x="0.0" y="24" width="121.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verified Users UBER 5200+" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cA-cV-c6J">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -182,6 +176,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="x7y-Ll-LGf" id="cpM-iZ-VDu"/>
+                        <outlet property="messageLabel" destination="4cA-cV-c6J" id="uEz-gq-Jhb"/>
                         <segue destination="3rX-Ur-eGE" kind="show" identifier="signupNext" id="KHS-Po-poQ"/>
                     </connections>
                 </viewController>
@@ -229,9 +224,21 @@
                                     <action selector="loginPressed:" destination="dkh-0b-iPB" eventType="touchUpInside" id="XFK-2N-cYd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxw-5b-xvY">
+                                <rect key="frame" x="216" y="269" width="122" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WQ1-JH-rqC"/>
+                                    <constraint firstAttribute="width" constant="122" id="zqh-eG-GAe"/>
+                                </constraints>
+                                <state key="normal" title="Forget password?"/>
+                                <connections>
+                                    <action selector="resetPasswordPressd:" destination="dkh-0b-iPB" eventType="touchUpInside" id="pbD-EU-UUD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1mC-Or-CtR" firstAttribute="trailing" secondItem="Zxw-5b-xvY" secondAttribute="trailing" constant="37" id="EwX-O3-nZR"/>
                             <constraint firstItem="1mC-Or-CtR" firstAttribute="trailing" secondItem="SMC-iz-2mj" secondAttribute="trailing" constant="37" id="HFP-wx-66a"/>
                             <constraint firstItem="jXw-yT-Wcq" firstAttribute="top" secondItem="SMC-iz-2mj" secondAttribute="bottom" constant="20" id="Kzk-GY-1Z1"/>
                             <constraint firstItem="SMC-iz-2mj" firstAttribute="top" secondItem="yNI-oZ-Krv" secondAttribute="bottom" constant="20" id="LQN-WI-8bj"/>
@@ -240,6 +247,7 @@
                             <constraint firstItem="1mC-Or-CtR" firstAttribute="trailing" secondItem="yNI-oZ-Krv" secondAttribute="trailing" constant="37" id="On3-q3-Zmq"/>
                             <constraint firstItem="yNI-oZ-Krv" firstAttribute="leading" secondItem="1mC-Or-CtR" secondAttribute="leading" constant="37" id="TIZ-Y5-cDn"/>
                             <constraint firstItem="SMC-iz-2mj" firstAttribute="leading" secondItem="1mC-Or-CtR" secondAttribute="leading" constant="37" id="Tmt-4h-BKO"/>
+                            <constraint firstItem="Zxw-5b-xvY" firstAttribute="top" secondItem="jXw-yT-Wcq" secondAttribute="bottom" constant="8" id="n0v-B5-sOD"/>
                             <constraint firstItem="yNI-oZ-Krv" firstAttribute="top" secondItem="1mC-Or-CtR" secondAttribute="top" constant="37" id="ye4-Tm-fdt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1mC-Or-CtR"/>
@@ -408,10 +416,14 @@
                         <viewLayoutGuide key="safeArea" id="2wf-kA-oOf"/>
                     </view>
                     <connections>
+                        <outlet property="buttonTopConstraint" destination="KjW-2h-MhE" id="JvJ-su-TfD"/>
                         <outlet property="getStartedButton" destination="evt-EG-Ydg" id="NgR-lg-leb"/>
                         <outlet property="password" destination="fgX-N3-smP" id="ga9-kd-rYw"/>
+                        <outlet property="passwordBottom" destination="Stg-du-T5S" id="nfM-eQ-nKp"/>
                         <outlet property="passwordConfirm" destination="yRr-wj-GZW" id="woB-VH-eYK"/>
+                        <outlet property="titleLabel" destination="4JE-A1-2SU" id="q8h-TC-y9V"/>
                         <outlet property="username" destination="nwH-dM-ndb" id="M0Z-6Y-aJo"/>
+                        <outlet property="usernameHint" destination="ojh-ae-m8w" id="6FP-1N-G5W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayy-Vq-JQj" userLabel="First Responder" sceneMemberID="firstResponder"/>

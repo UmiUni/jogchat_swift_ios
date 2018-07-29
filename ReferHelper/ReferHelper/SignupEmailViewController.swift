@@ -10,22 +10,22 @@ import UIKit
 
 class SignupEmailViewController: UIViewController {
     var email = ""
+    var resettingPassword = false
     
     @IBOutlet weak var Message: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        performSignup(email)
+        performSendEmail(to: email)
     }
     
-    func performSignup(_ emailText:String) {
+    func performSendEmail(to emailText:String) {
         // prepare json data
         let json: [String: String] = ["Email": emailText]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
         // create post request
-        let url = URL(string: API.ReferrerCheckSignupEmail)!
+        let url = URL(string: resettingPassword ? API.SendResetPasswordEmail : API.ReferrerCheckSignupEmail)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         

@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             let url = userActivity.webpageURL!
             //handle url and open whatever page you want to open.
-            
+            let type = url.pathComponents.last!
             let params = queryParameters(from: url)
             
-            GoToSignup(params)
+            GoToSignup(params, type)
         }
         return true
     }
@@ -44,13 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
     
-    func GoToSignup(_ params: [String:String]) {
+    func GoToSignup(_ params: [String:String], _ type:String) {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signupFormVC = createAccountStoryboard.instantiateViewController(withIdentifier: "SignupForm") as! SignupFormViewController
         signupFormVC.email = params["email"]!
         signupFormVC.token = params["token"]!
+        signupFormVC.type = type
         self.window?.rootViewController = signupFormVC
         self.window?.makeKeyAndVisible()
     }

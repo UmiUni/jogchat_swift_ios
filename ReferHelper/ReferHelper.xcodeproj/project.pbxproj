@@ -87,13 +87,13 @@
 				F2101BF62105490F00C58647 /* SignupFormViewController.swift */,
 				F2ACEADD20ED871800E8EC8E /* WelcomeViewController.swift */,
 				F2ACEAF220F2ECD100E8EC8E /* MainTabViewController.swift */,
+				F2101BFA2105764900C58647 /* ProfileViewController.swift */,
 				F2ACEAE220ED871900E8EC8E /* Assets.xcassets */,
 				F2ACEAE420ED871900E8EC8E /* LaunchScreen.storyboard */,
 				F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */,
+				F2101BF221040D1600C58647 /* Constants.swift */,
 				F2ACEADB20ED871800E8EC8E /* AppDelegate.swift */,
 				F286945820FC84760040BF4A /* Supporting Files */,
-				F2101BF221040D1600C58647 /* Constants.swift */,
-				F2101BFA2105764900C58647 /* ProfileViewController.swift */,
 			);
 			path = ReferHelper;
 			sourceTree = "<group>";
