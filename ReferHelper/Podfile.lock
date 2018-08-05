@@ -1,0 +1,24 @@
+PODS:
+  - Cards (1.3.3):
+    - Player
+  - Player (0.8.4)
+  - ViewAnimator (2.1.2)
+
+DEPENDENCIES:
+  - Cards
+  - ViewAnimator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cards
+    - Player
+    - ViewAnimator
+
+SPEC CHECKSUMS:
+  Cards: 587ba57f77196ac7a93c1d10217be8b489489baa
+  Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
+  ViewAnimator: 20df9a24a076c6ee78b77a4dbf1943808c94954e
+
+PODFILE CHECKSUM: 5dfa0617d7d00d5d000af7f5b250a102e3a7cefe
+
+COCOAPODS: 1.5.2

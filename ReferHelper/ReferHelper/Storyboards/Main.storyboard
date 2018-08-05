@@ -291,7 +291,7 @@
             </objects>
             <point key="canvasLocation" x="3702" y="-717"/>
         </scene>
-        <!--Applicant-->
+        <!--Apply-->
         <scene sceneID="18N-5Q-wtB">
             <objects>
                 <viewController id="UDP-11-gFc" sceneMemberID="viewController">
@@ -301,7 +301,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xgC-El-PWW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Applicant" image="nav-suitcase" id="NSi-8B-QZp"/>
+                    <tabBarItem key="tabBarItem" title="Apply" image="nav-suitcase" id="NSi-8B-QZp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5E-mr-ptN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,7 +489,7 @@
             </objects>
             <point key="canvasLocation" x="3702" y="730"/>
         </scene>
-        <!--Referral-->
+        <!--Refer-->
         <scene sceneID="nVi-sI-bFi">
             <objects>
                 <viewController id="PnY-PU-F88" sceneMemberID="viewController">
@@ -499,7 +499,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="axW-QV-zZA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Referral" image="nav-guardian" id="ieR-k0-0cD"/>
+                    <tabBarItem key="tabBarItem" title="Refer" image="nav-guardian" id="ieR-k0-0cD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3m-uV-6K7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
