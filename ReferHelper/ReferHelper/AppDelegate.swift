@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let createAccountStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let welcomeVC = createAccountStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
+        let welcomeVC = createAccountStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeNavigationController
         self.window?.rootViewController = welcomeVC
         self.window?.makeKeyAndVisible()
     }

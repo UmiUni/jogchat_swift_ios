@@ -28,8 +28,8 @@ class ProfileViewController: UIViewController {
     }
     
     func goToWelcomeView() {
-        let welcomViewController = storyboard?.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
-        present(welcomViewController, animated: true, completion: nil)
+        let welcomeNavigationController = storyboard?.instantiateViewController(withIdentifier: "Welcome") as! WelcomeNavigationController
+        present(welcomeNavigationController, animated: true, completion: nil)
     }
     
     /*
