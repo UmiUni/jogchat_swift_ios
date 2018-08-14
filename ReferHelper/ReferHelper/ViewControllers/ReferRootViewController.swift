@@ -24,6 +24,7 @@ class ReferRootViewController: UIViewController {
 extension ReferRootViewController {
     fileprivate func preparePostButton() {
         postButton = IconButton(title: "+", titleColor: .white)
+        postButton.addTarget(self, action: #selector(handlePostButton), for: .touchUpInside)
     }
     
     fileprivate func prepareNavigationItem() {
@@ -31,5 +32,12 @@ extension ReferRootViewController {
         navigationItem.titleLabel.textColor = .white
         
         navigationItem.rightViews = [postButton]
+    }
+}
+
+extension ReferRootViewController {
+    @objc
+    fileprivate func handlePostButton() {
+        performSegue(withIdentifier: "postPosition", sender: self)
     }
 }

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let preferences = UserDefaults.standard
-        if ((preferences.object(forKey: "token")) == nil) {
+        if ((preferences.object(forKey: ResponseKey.Token)) == nil) {
             GoToWelcome()
         }
         

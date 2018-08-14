@@ -68,7 +68,10 @@ class LoginViewController: UIViewController {
                 }
                 // good res
                 let preferences = UserDefaults.standard
-                preferences.set(responseJSON[ResponseKey.Token], forKey: "token")
+                preferences.set(responseJSON[ResponseKey.Token], forKey: ResponseKey.Token)
+                preferences.set(responseJSON[ResponseKey.Email], forKey: ResponseKey.Email)
+                preferences.set(responseJSON[ResponseKey.UserId], forKey: ResponseKey.UserId)
+                preferences.set(responseJSON[ResponseKey.Username], forKey: ResponseKey.Username)
                 
                 DispatchQueue.main.async {
                     self.goToMainTabView()

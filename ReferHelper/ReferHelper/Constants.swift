@@ -10,6 +10,7 @@ import Foundation
 
 struct API {
     static let WebBase = "http://178.128.0.108:3001"
+    static let WebAuthBase = "\(WebBase)/v1"
     static let ActivateAndSignup = "\(WebBase)/activate_and_signup"
     static let AddCompany = "\(WebBase)/add_company"
     static let AddSchool = "\(WebBase)/add_school"
@@ -18,12 +19,17 @@ struct API {
     static let ResetPasswordForm = "\(WebBase)/reset_password_form"
     static let SendResetPasswordEmail = "\(WebBase)/send_reset_password_email"
     static let Signin = "\(WebBase)/signin"
+    static let PostPosition = "\(WebAuthBase)/post_position"
+    static let CommentOn = "\(WebAuthBase)/comment_on"
 }
 
 struct ResponseKey {
     static let Message = "message"
     static let Error = "error"
     static let Token = "AuthToken"
+    static let Username = "Username"
+    static let UserId = "UserId"
+    static let Email = "Email"
 }
 
 struct URLType {

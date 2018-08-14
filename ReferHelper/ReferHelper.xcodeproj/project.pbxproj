@@ -11,6 +11,7 @@
 		F2101BF321040D1600C58647 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2101BF221040D1600C58647 /* Constants.swift */; };
 		F2101BF72105490F00C58647 /* SignupFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2101BF62105490F00C58647 /* SignupFormViewController.swift */; };
 		F2101BFB2105764900C58647 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2101BFA2105764900C58647 /* ProfileViewController.swift */; };
+		F24F86612120F292008873D7 /* PostPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F86602120F292008873D7 /* PostPositionViewController.swift */; };
 		F274AD5A211FB2F6003F281D /* ReferRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274AD59211FB2F6003F281D /* ReferRootViewController.swift */; };
 		F298DB5D20FC1B3F0087F9DB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */; };
 		F298DB6120FC42570087F9DB /* SignupEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298DB6020FC42570087F9DB /* SignupEmailViewController.swift */; };
@@ -32,6 +33,7 @@
 		F2101BF221040D1600C58647 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2101BF62105490F00C58647 /* SignupFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormViewController.swift; sourceTree = "<group>"; };
 		F2101BFA2105764900C58647 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F24F86602120F292008873D7 /* PostPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPositionViewController.swift; sourceTree = "<group>"; };
 		F274AD59211FB2F6003F281D /* ReferRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferRootViewController.swift; sourceTree = "<group>"; };
 		F298DB5B20FBFC0B0087F9DB /* ReferHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReferHelper.entitlements; sourceTree = "<group>"; };
 		F298DB5C20FC1B3F0087F9DB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				F2101BFA2105764900C58647 /* ProfileViewController.swift */,
 				F2A75E12211FAE640070AD52 /* ReferNavigationController.swift */,
 				F274AD59211FB2F6003F281D /* ReferRootViewController.swift */,
+				F24F86602120F292008873D7 /* PostPositionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				F274AD5A211FB2F6003F281D /* ReferRootViewController.swift in Sources */,
 				F2ACEAF120F1812500E8EC8E /* LoginViewController.swift in Sources */,
+				F24F86612120F292008873D7 /* PostPositionViewController.swift in Sources */,
 				F298DB6120FC42570087F9DB /* SignupEmailViewController.swift in Sources */,
 				F2101BF72105490F00C58647 /* SignupFormViewController.swift in Sources */,
 				F2ACEAF320F2ECD100E8EC8E /* MainTabViewController.swift in Sources */,
